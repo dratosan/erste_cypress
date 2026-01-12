@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "lib": ["es5", "dom", "ESNext"],
+    "types": ["cypress", "node"], // Tady MUSÍ být "cypress"
+    "moduleResolution": "node",
+    "allowJs": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "baseUrl": "."
+  },
+  "include": ["**/*.ts"]
+}
