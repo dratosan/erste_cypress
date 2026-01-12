@@ -7,13 +7,13 @@ const {
   createEsbuildPlugin,
 } = require("@badeball/cypress-cucumber-preprocessor/esbuild");
 
-// Načtení dotenv (volitelné, pokud nepoužíváš jen shell exporty)
+// Load dotenv (optional, unless you're just using shell exports)
 // require('dotenv').config()
 
 module.exports = defineConfig({
   e2e: {
-    // Cypress automaticky mapuje CYPRESS_BASE_URL na baseUrl,
-    // ale pro jistotu to můžeme pojistit takto:
+    // Cypress automatically maps CYPRESS_BASE_URL to baseUrl,
+    // but to be safe we ​​can do this:
     baseUrl:
       process.env.CYPRESS_BASE_URL || "https://george.fat3.sparkasse.at/",
     experimentalModifyObstructiveThirdPartyCode: true,

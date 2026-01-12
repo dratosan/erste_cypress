@@ -9,12 +9,12 @@ export class LoginPage {
   public visit(): void {
     const fullAuthUrl =
       "https://login.fat.sparkasse.at/sts/oauth/authorize?client_id=georgeclient&response_type=token&redirect_uri=https%3A%2F%2Fgeorge.fat3.sparkasse.at%2Findex.html";
-    // Nastavíme velké rozlišení, aby byl vyhledávač hned vidět
+    // We set a high resolution so that the search engine is immediately visible
     cy.viewport(1920, 1080);
-    // Jdeme přímo na login, bez cy.origin
+    // We go directly to login, without cy.origin
     cy.visit(fullAuthUrl);
 
-    // Počkáme, až se objeví input
+    // We wait for the input to appear
     cy.get(this.usernameInput, { timeout: 20000 }).should("be.visible");
   }
 

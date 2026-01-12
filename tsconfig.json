@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES6",
     "lib": ["es5", "dom", "ESNext"],
-    "types": ["cypress", "node"], // Tady MUSÍ být "cypress"
+    "types": ["cypress", "node"], // This MUST be "cypress"
     "moduleResolution": "node",
     "allowJs": true,
     "noEmit": true,
